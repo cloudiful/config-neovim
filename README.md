@@ -18,13 +18,13 @@ then clone this repo
 Linux:
 
 ```bash
-git clone git@github.com:cloudiful/nvim-config.git ~/.config/nvim/
+git clone https://github.com/cloudiful/config-neovim.git ~/.config/nvim/
 ```
 
 Windows (powershell):
 
 ```bash
-git clone git@github.com:cloudiful/nvim-config.git "$env:USERPROFILE\AppData\Local\nvim"
+git clone https://github.com/cloudiful/config-neovim.git "$env:USERPROFILE\AppData\Local\nvim"
 ```
 
 ## Config
