@@ -13,10 +13,21 @@ map({ "n", "v", "i" }, "<C-v>", '<cmd>normal! "+p<cr>')
 map({ "n", "v", "i" }, "<C-s>", "<cmd>w<cr>")
 
 -- undo
-map({ "n", "v", "i" }, "<C-z>", "<cmd>u<cr>")
+map({ "n", "v", "i" }, "<C-z>", "<cmd>normal! u<cr>")
 
 -- select all
 map({ "n", "v", "i" }, "<C-a>", "<cmd>normal! ggVG<cr>")
+
+map({ "n", "v", "i" }, "<C-S-Left>", require("smart-splits").move_cursor_left)
+map({ "n", "v", "i" }, "<C-S-Down>", require("smart-splits").move_cursor_down)
+map({ "n", "v", "i" }, "<C-S-Up>", require("smart-splits").move_cursor_up)
+map({ "n", "v", "i" }, "<C-S-Right>", require("smart-splits").move_cursor_right)
+
+map({ "n", "v", "i" }, "<A-Left>", require("smart-splits").resize_left)
+map({ "n", "v", "i" }, "<A-Down>", require("smart-splits").resize_down)
+map({ "n", "v", "i" }, "<A-Up>", require("smart-splits").resize_up)
+map({ "n", "v", "i" }, "<A-Right>", require("smart-splits").resize_right)
+
 
 -- use j to jump
 map({ "n", "x", "o" }, "j", function()
