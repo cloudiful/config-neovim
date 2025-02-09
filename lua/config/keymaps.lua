@@ -23,10 +23,10 @@ map({ "n", "v", "i" }, "<C-S-Down>", require("smart-splits").move_cursor_down)
 map({ "n", "v", "i" }, "<C-S-Up>", require("smart-splits").move_cursor_up)
 map({ "n", "v", "i" }, "<C-S-Right>", require("smart-splits").move_cursor_right)
 
-map({ "n", "v", "i" }, "<A-Left>", require("smart-splits").resize_left)
-map({ "n", "v", "i" }, "<A-Down>", require("smart-splits").resize_down)
-map({ "n", "v", "i" }, "<A-Up>", require("smart-splits").resize_up)
-map({ "n", "v", "i" }, "<A-Right>", require("smart-splits").resize_right)
+map({ "n", "v", "i" }, "<C-A-Left>", require("smart-splits").resize_left)
+map({ "n", "v", "i" }, "<C-A-Down>", require("smart-splits").resize_down)
+map({ "n", "v", "i" }, "<C-A-Up>", require("smart-splits").resize_up)
+map({ "n", "v", "i" }, "<C-A-Right>", require("smart-splits").resize_right)
 
 
 -- use j to jump
