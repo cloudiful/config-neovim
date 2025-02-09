@@ -7,7 +7,7 @@ local unmap = vim.keymap.del
 
 -- use CTRL+c to copy to clipboard
 map({ "v" }, "<C-c>", '"+y')
-map({ "n", "v", "i" }, "<C-v>", '"+p')
+map({ "n", "v", "i" }, "<C-v>", '<cmd>normal! "+p<cr>')
 
 -- save
 map({ "n", "v", "i" }, "<C-s>", "<cmd>w<cr>")
