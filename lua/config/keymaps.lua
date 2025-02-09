@@ -28,14 +28,8 @@ map({ "n", "v", "i" }, "<C-A-Down>", require("smart-splits").resize_down)
 map({ "n", "v", "i" }, "<C-A-Up>", require("smart-splits").resize_up)
 map({ "n", "v", "i" }, "<C-A-Right>", require("smart-splits").resize_right)
 
-
--- use j to jump
-map({ "n", "x", "o" }, "j", function()
-  require("flash").jump()
-end, { desc = "Flash" })
-map({ "n", "x", "o" }, "J", function()
-  require("flash").treesitter()
-end, { desc = "Flash Treesitter" })
+-- use j to flash jump
+map({ "n", "v" }, "j", require("flash").jump, { desc = "Flash" })
 
 -- use wasd to move around like a game
 map({ "n", "v" }, "w", "k")
