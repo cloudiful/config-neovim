@@ -18,15 +18,18 @@ map({ "n", "v", "i" }, "<C-z>", "<cmd>normal! u<cr>")
 -- select all
 map({ "n", "v", "i" }, "<C-a>", "<cmd>normal! ggVG<cr>")
 
-map({ "n", "v", "i" }, "<C-S-Left>", require("smart-splits").move_cursor_left)
-map({ "n", "v", "i" }, "<C-S-Down>", require("smart-splits").move_cursor_down)
-map({ "n", "v", "i" }, "<C-S-Up>", require("smart-splits").move_cursor_up)
-map({ "n", "v", "i" }, "<C-S-Right>", require("smart-splits").move_cursor_right)
+if vim.g.vscode then
+else
+  map({ "n", "v", "i" }, "<C-S-Left>", require("smart-splits").move_cursor_left)
+  map({ "n", "v", "i" }, "<C-S-Down>", require("smart-splits").move_cursor_down)
+  map({ "n", "v", "i" }, "<C-S-Up>", require("smart-splits").move_cursor_up)
+  map({ "n", "v", "i" }, "<C-S-Right>", require("smart-splits").move_cursor_right)
 
-map({ "n", "v", "i" }, "<C-A-Left>", require("smart-splits").resize_left)
-map({ "n", "v", "i" }, "<C-A-Down>", require("smart-splits").resize_down)
-map({ "n", "v", "i" }, "<C-A-Up>", require("smart-splits").resize_up)
-map({ "n", "v", "i" }, "<C-A-Right>", require("smart-splits").resize_right)
+  map({ "n", "v", "i" }, "<C-A-Left>", require("smart-splits").resize_left)
+  map({ "n", "v", "i" }, "<C-A-Down>", require("smart-splits").resize_down)
+  map({ "n", "v", "i" }, "<C-A-Up>", require("smart-splits").resize_up)
+  map({ "n", "v", "i" }, "<C-A-Right>", require("smart-splits").resize_right)
+end
 
 -- use j to flash jump
 map({ "n", "v" }, "j", require("flash").jump, { desc = "Flash" })
