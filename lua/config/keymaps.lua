@@ -11,6 +11,7 @@ map({ "n", "v", "i" }, "<C-v>", '<cmd>normal! "+p<cr>')
 
 -- save
 map({ "n", "v", "i" }, "<C-s>", "<cmd>w<cr>")
+map({ "n", "v", "i" }, "<D-s>", "<cmd>w<cr>")
 
 -- undo
 map({ "n", "v", "i" }, "<C-z>", "<cmd>normal! u<cr>")
@@ -25,10 +26,20 @@ else
   map({ "n", "v", "i" }, "<C-S-Up>", require("smart-splits").move_cursor_up)
   map({ "n", "v", "i" }, "<C-S-Right>", require("smart-splits").move_cursor_right)
 
+  map({ "n", "v", "i" }, "<C-S-a>", require("smart-splits").move_cursor_left)
+  map({ "n", "v", "i" }, "<C-S-s>", require("smart-splits").move_cursor_down)
+  map({ "n", "v", "i" }, "<C-S-w>", require("smart-splits").move_cursor_up)
+  map({ "n", "v", "i" }, "<C-S-d>", require("smart-splits").move_cursor_right)
+
   map({ "n", "v", "i" }, "<C-A-Left>", require("smart-splits").resize_left)
   map({ "n", "v", "i" }, "<C-A-Down>", require("smart-splits").resize_down)
   map({ "n", "v", "i" }, "<C-A-Up>", require("smart-splits").resize_up)
   map({ "n", "v", "i" }, "<C-A-Right>", require("smart-splits").resize_right)
+
+  map({ "n", "v", "i" }, "<C-A-a>", require("smart-splits").resize_left)
+  map({ "n", "v", "i" }, "<C-A-s>", require("smart-splits").resize_down)
+  map({ "n", "v", "i" }, "<C-A-w>", require("smart-splits").resize_up)
+  map({ "n", "v", "i" }, "<C-A-d>", require("smart-splits").resize_right)
 end
 
 -- use j to flash jump
