@@ -45,24 +45,6 @@ end
 -- use j to flash jump
 map({ "n", "v" }, "j", require("flash").jump, { desc = "Flash" })
 
--- use wasd to move around like a game
-map({ "n", "v" }, "w", "k")
-map({ "n", "v" }, "s", "j")
-map({ "n", "v" }, "a", "h")
-map({ "n", "v" }, "d", "l")
-
--- use WASD to move quickly
-map({ "n", "v" }, "W", "<C-b>") -- page up
-map({ "n", "v" }, "S", "<C-f>") -- page down
-map({ "n", "v" }, "A", "ge") -- move to left word's end
-map({ "n", "v" }, "D", "e") -- move to right word's end
-
--- use k to delete
-map({ "n", "v" }, "k", "d")
-
--- use q e to insert append like playing rainbow six siege :)
-map({ "n", "v" }, "q", "i") -- q to insert
-map({ "n", "v" }, "e", "a") -- e to append
 
 -- use ` to go to the start of word | 0 to EOL
 map({ "n", "v" }, "`", "^")
