@@ -59,7 +59,6 @@ map({ "n", "v" }, "D", "e") -- move to right word's end
 
 -- use k to delete
 map({ "n", "v" }, "k", "d")
-map("n", "kk", "dd") -- delete line
 
 -- use q e to insert append like playing rainbow six siege :)
 map({ "n", "v" }, "q", "i") -- q to insert
